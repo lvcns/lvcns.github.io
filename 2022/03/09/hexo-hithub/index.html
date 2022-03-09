@@ -4,8 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, lvcns">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="搭建Hexo博客并且部署到GitHub, lvcns">
+    <meta name="description" content="一，下载Nodejs,git,hexo
+Nodejs下载网址：https://nodejs.org/zh-cn/
+检查是否安装成功：
+
+
+node -v
+npm -v
+
+
+git下载网址：https://git-scm.com/downlo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +26,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | lvcns</title>
+    <title>搭建Hexo博客并且部署到GitHub | lvcns</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -238,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">搭建Hexo博客并且部署到GitHub</h1>
                 </div>
             </div>
         </div>
@@ -357,9 +366,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -371,21 +384,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-08
+                    2022-03-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-08
+                    2022-03-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    334
                 </div>
                 
 
@@ -410,19 +423,80 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h3 id="一，下载Nodejs-git-hexo"><a href="#一，下载Nodejs-git-hexo" class="headerlink" title="一，下载Nodejs,git,hexo"></a>一，下载Nodejs,git,hexo</h3><ol>
+<li><p>Nodejs下载网址：<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">https://nodejs.org/zh-cn/</a></p>
+<p>检查是否安装成功：</p>
+</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">node -v
+npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="2">
+<li><p>git下载网址：<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a><br>检查是否安装成功：<code>git --version</code></p>
+</li>
+<li><p>hexo下载：<code>npm install hexo-cli -g</code><br>检查是否安装成功：<code>hexo -v</code></p>
+</li>
+</ol>
+<h3 id="二，搭建仓库"><a href="#二，搭建仓库" class="headerlink" title="二，搭建仓库"></a>二，搭建仓库</h3><ol>
+<li><p>github注册账号</p>
+</li>
+<li><p>新建仓库</p>
+<p>​    Repository名称：用户名.github.io</p>
+<p>​    权限：public</p>
+<p>​    勾选：ADD a README file</p>
+</li>
+</ol>
+<h3 id="三，生成ssh密钥并绑定："><a href="#三，生成ssh密钥并绑定：" class="headerlink" title="三，生成ssh密钥并绑定："></a>三，生成ssh密钥并绑定：</h3><ol>
+<li><p>生成ssh密钥：<code>ssh-keygen -t rsa -C &quot;GitHub邮箱地址&quot;</code></p>
+</li>
+<li><p>在用户文件夹下的.ssh文件夹下找到公钥：id_rsa.pub</p>
+</li>
+<li><p>将公钥复制填写到你的GitHub上绑定</p>
+</li>
+<li><p>检测ssh密钥是否绑定成功：ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;</a></p>
+</li>
+</ol>
+<h3 id="四，搭建本地博客"><a href="#四，搭建本地博客" class="headerlink" title="四，搭建本地博客"></a>四，搭建本地博客</h3><ol>
+<li><p>新建一个文件夹blog</p>
+</li>
+<li><p>在该文件夹里初始化hexo博客： hexo init</p>
+</li>
+<li><p>在本地部署服务器查看 hexo s</p>
+</li>
+</ol>
+<h3 id="五，部署到github"><a href="#五，部署到github" class="headerlink" title="五，部署到github"></a>五，部署到github</h3><ol>
+<li>将根目录下的_config.yml中最后一行修改添加为：</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">deploy: 
+	type: git
+	repository: 你的仓库地址
+	branch: main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="2">
+<li>安装hexo-deployer-git</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="3">
+<li>生成静态文件</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<ol start="4">
+<li>设置邮箱和用户名</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">git config --global user.email &quot;你的邮箱&quot;
+
+git config --global user.name &quot;你的用户名&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ol start="5">
+<li>将静态文件上传到GitHub</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>注意：第一次上传需要用githun生成token</p>
+</blockquote>
 
                 
             </div>
@@ -449,7 +523,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lvcns.github.io/2022/03/08/hello-world/">http://lvcns.github.io/2022/03/08/hello-world/</a>
+                    <a href="http://lvcns.github.io/2022/03/09/hexo-hithub/">http://lvcns.github.io/2022/03/09/hexo-hithub/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -486,7 +560,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -655,9 +733,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/03/09/hexo-hithub/">
                     <div class="card-image">
@@ -675,9 +754,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -686,6 +765,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -701,7 +781,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/03/08/hello-world/">
@@ -731,7 +811,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
