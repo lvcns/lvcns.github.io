@@ -402,14 +402,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    951
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    10 分
                 </div>
                 
 
@@ -475,9 +475,66 @@
 <p>即：<strong>X&#x3D;A*10^(n&#x2F;2)+B，Y&#x3D;C*10^(n&#x2F;2)+D</strong>，则：<br>$$<br>\begin{equation}\begin{split}<br>XY&amp;&#x3D;(A\times 10^{\frac n 2} + B)(C \times 10^{\frac n 2} + D)\\<br>&amp;&#x3D;AC \times 10^{\frac n 2} + (AD + BC) \times 10^{n} + BD<br>\end{split}\end{equation}<br>$$</p>
 <p>该公式需要进行4次n&#x2F;2位整数的乘法（AC,AD,BC,BD）,3次不超过2n位的整数加法，以及两次移位。但可以<strong>优化为以下公式</strong>：<br>$$<br>XY &#x3D; AC \times 10^{n} + ((A-B)(D-C)+AC+BD) \times 10^{\frac n 2} + BD<br>$$<br>优化后的公式只需要进行3次n&#x2F;2位整数的乘法,6次的整数加法，以及两次移位。设T(n)是2个n位整数相乘所需要的运算总数，则：</p>
 <p>$$<br>T(n) &#x3D;<br>\begin{cases}<br>1 &amp; n&#x3D;1\\<br>3T(n&#x2F;2) + cn &amp; n&gt;1<br>\end{cases}<br>$$</p>
-<p>$$<br>\text{时间复杂度：}<br>T(n) &#x3D; O(n^{log_3}) &#x3D; O(n^{1.59})<br>$$</p>
-<p>递归推导：已知<strong>T(1)&#x3D;1,T(n)&#x3D;3T(n&#x2F;2)+cn</strong><br>$$<br>\begin{equation}\begin{split}<br>T(n) &amp;&#x3D; 3T(\frac n 2) + cn\\<br>&amp;&#x3D;3(3T(\frac n 4) + \frac {cn} 2) + cn\\<br>&amp;&#x3D;9(T(\frac n 8) + \frac {cn} 4) + \frac {3cn} 2 + cn\\<br>&amp;&#x3D;\text{……}\\<br>&amp;&#x3D;3^k + 3^{k-1} \times 2c + 3^{k-2} \times 4c + \text{……}+3c2^{k-1} + c2^{k}\\<br>&amp;&#x3D;O(n^{log_3})\\<br>&amp;&#x3D;O(n^{1.59})<br>\end{split}\end{equation}<br>$$</p>
-<h3 id="3-Strassen矩阵乘法"><a href="#3-Strassen矩阵乘法" class="headerlink" title="3.Strassen矩阵乘法"></a>3.Strassen矩阵乘法</h3><h3 id="4-棋盘覆盖"><a href="#4-棋盘覆盖" class="headerlink" title="4.棋盘覆盖"></a>4.棋盘覆盖</h3><h3 id="5-合并排序"><a href="#5-合并排序" class="headerlink" title="5.合并排序"></a>5.合并排序</h3><h3 id="6-快速排序"><a href="#6-快速排序" class="headerlink" title="6.快速排序"></a>6.快速排序</h3><h3 id="7-线性时间选择"><a href="#7-线性时间选择" class="headerlink" title="7.线性时间选择"></a>7.线性时间选择</h3><h3 id="8-最接近点对问题"><a href="#8-最接近点对问题" class="headerlink" title="8.最接近点对问题"></a>8.最接近点对问题</h3><h3 id="9-循环赛日程表"><a href="#9-循环赛日程表" class="headerlink" title="9.循环赛日程表"></a>9.循环赛日程表</h3>
+<p>$$<br>\text{时间复杂度：}<br>T(n) &#x3D; O(n^{log3}) &#x3D; O(n^{1.59})<br>$$</p>
+<p>递归推导：已知<strong>T(1)&#x3D;1,T(n)&#x3D;3T(n&#x2F;2)+cn</strong><br>$$<br>\begin{equation}\begin{split}<br>T(n) &amp;&#x3D; 3T(\frac n 2) + cn\\<br>&amp;&#x3D;3(3T(\frac n 4) + \frac {cn} 2) + cn\\<br>&amp;&#x3D;9(T(\frac n 8) + \frac {cn} 4) + \frac {3cn} 2 + cn\\<br>&amp;&#x3D;\text{……}\\<br>&amp;&#x3D;3^k + 3^{k-1} \times 2c + 3^{k-2} \times 4c + \text{……}+3c2^{k-1} + c2^{k}\\<br>&amp;&#x3D;O(n^{log3})\\<br>&amp;&#x3D;O(n^{1.59})<br>\end{split}\end{equation}<br>$$</p>
+<h3 id="3-Strassen矩阵乘法"><a href="#3-Strassen矩阵乘法" class="headerlink" title="3.Strassen矩阵乘法"></a>3.Strassen矩阵乘法</h3><blockquote>
+<p>设A和B是两个 n*n的矩阵，他们的乘积同样是一个n*n的矩阵。A和B的乘积矩阵C中的元素 $ c_{ij} $定义为:<br>$$<br>c_{ij}&#x3D;\sum_{k&#x3D;1}^{n}a_{ik}b_{kj}<br>$$</p>
+</blockquote>
+<p>如果按照定义中的方法来计算所需要的计算时间是$ O(n^3) $，但是如果采用分治的方法可以将时间复杂度改进到$ O(n^{log_{7}}) &#x3D; O(n^{2.81}) $。其基本思想还是使用分治法。</p>
+<p><strong>具体思想方法：</strong></p>
+<p>将A,B,C三个矩阵每个都分为四个子矩阵，则C&#x3D;AB可以重写为：<br>$$<br>\begin{bmatrix}<br>C_{11} &amp; C_{12}\\<br>C_{21} &amp; C_{22}\\<br>\end{bmatrix}<br>&#x3D;<br>\begin{bmatrix}<br>A_{11} &amp; A_{12}\\<br>A_{21} &amp; A_{22}\\<br>\end{bmatrix}<br>\begin{bmatrix}<br>B_{11} &amp; B_{12}\\<br>B_{21} &amp; B_{22}\\<br>\end{bmatrix}<br>$$</p>
+<p>由此可得：<br>$$<br>C_{11}  &#x3D; A_{11} \times B_{11} + A_{12} \times B_{21}\\<br>C_{12}  &#x3D; A_{11} \times B_{12} + A_{12} \times B_{22}\\<br>C_{21}  &#x3D; A_{21} \times B_{11} + A_{22} \times B_{21}\\<br>C_{22}  &#x3D; A_{21} \times B_{12} + A_{22} \times B_{22}\\<br>$$<br>如果n&#x3D;2，则2个2阶方程方阵的乘积可以直接算出来，共需8次乘法和4次加法。当子矩阵的阶数大于2时，为求2个子矩阵的积，可以将子矩阵继续分块，直到子矩阵的阶降为2。由此产生了分治降阶的递归算法。依次算法，计算2个n阶方阵的乘积转化为计算8个n&#x2F;2阶方阵的乘积和4个n&#x2F;2阶方阵的加法。2个n&#x2F;2<em>n&#x2F;2矩阵的加法显然可以在$ O(n^{2}) $时间内完成。因此T(n)的递归方程如下：<br>$$<br>T(n) &#x3D;<br>\begin{cases}<br>O(1) &amp; n &#x3D; 2\\<br>8T(n&#x2F;2) + O(n^{2}) &amp; n &gt; 2<br>\end{cases}<br>$$<br>这个方程的解依旧是$ O(n^3) $，但是在该基础上</em><strong>Strassen</strong><em>提出了一种新的算法来计算2个2阶方程的乘积。</em><strong>这个算法只用了7次乘法运算</strong>*，但增加了加减法的运算次数，这7次乘法是：<br>$$<br>M_1 &#x3D; A_{11}(B_{12} \times B_{22})\\<br>M_2 &#x3D; (A_{11} + A_{12})B_{22}\\<br>M_3 &#x3D; (A_{21} + A_{22})B_{11}\\<br>M_4 &#x3D; A_{22}(B_{21} - B_{11})\\<br>M_5 &#x3D; (A_{11} + A_{22})(B_{11} + B_{22})\\<br>M_6 &#x3D; (A_{12} - A_{22})(B_{21} + B_{22})\\<br>M_7 &#x3D; (A_{11} - A_{21})(B_{11} + B_{12})<br>$$<br>做了这7次乘法后，在做若干次加减法，就可以得到：<br>$$<br>C_{11} &#x3D; M_5 + M_4 - M_2 + M_6\\<br>C_{12} &#x3D; M_1 +M_2\\<br>C_{21} &#x3D; M_3 + M_5\\<br>C_{22} &#x3D; M_5 + M_1 - M_3 - M_7<br>$$<br>Strassen矩阵乘法中用了7次对于n&#x2F;2阶矩阵乘积的递归调用和18次n&#x2F;2阶矩阵的加减运算。由此可知，<strong>Strassen算法的时间复杂度T(n)为</strong>：<br>$$<br>T(n) &#x3D;<br>\begin{cases}<br>O(1) &amp; n &#x3D; 2\\<br>7T(n&#x2F;2) + O(n^2) &amp; n&gt;2<br>\end{cases}<br>$$<br>由此解递归方程得$ T(n) &#x3D; O(n^{log7}) &#x3D; O(n^{2.81}) $</p>
+<h3 id="4-棋盘覆盖"><a href="#4-棋盘覆盖" class="headerlink" title="4.棋盘覆盖"></a>4.棋盘覆盖</h3><h4 id="1-什么是棋盘覆盖"><a href="#1-什么是棋盘覆盖" class="headerlink" title="1.什么是棋盘覆盖"></a>1.什么是棋盘覆盖</h4><p><strong>首先需要引入两个概念：什么是特殊方格？什么是特殊棋盘？</strong><br>在一个$ 2^k \times 2^k $个方格组成的期盼中，若恰有一个方格与其他方格不同，则称该方格为特殊方格，且该棋盘为特殊棋盘。</p>
+<p><strong>然后再引出棋盘覆盖问题：</strong><br>在棋盘覆盖问题中，要用如下图所示的4种形态不同的L型骨牌覆盖一个给定的特殊棋盘上除特殊方格以外的其他方格，且任何两个L型骨牌不可相互重叠。除此以外，我们容易知道，覆盖一个特殊棋盘需要用到$ (4^k - 1)&#x2F;3 $个骨牌数。<br><img src="https://img-blog.csdnimg.cn/20200707141724222.png"><img src="https://img-blog.csdnimg.cn/20200707141821358.png"></p>
+<h4 id="2-解决棋盘覆盖的思想方法"><a href="#2-解决棋盘覆盖的思想方法" class="headerlink" title="2.解决棋盘覆盖的思想方法"></a>2.解决棋盘覆盖的思想方法</h4><p>用分治策略，可以设计解棋盘覆盖问题的一个简便的算法。当k&gt;0时，将$ 2^k \times 2^k  $棋盘分割为4个$ 2^{k-1} \times 2^{k-1} $子棋盘。如图所示(a)，特殊方格必位于4个较小子棋盘之一中，其余三个子棋盘中无特殊方格。为了将这三个无特殊方格的子棋盘转化为特殊棋盘，可以用一个L型骨牌覆盖这三个较小棋盘的会和处，如图(b)所示，这三个子棋盘上被L型骨牌覆盖的方格就成为该棋盘上的特殊方格，从而将原问题转化为4个较小规模的棋盘覆盖问题。递归的使用这种份分割，直至棋盘转化为$ 1 \times 1$棋盘。<br><img src="https://img-blog.csdnimg.cn/20200707145142306.png"></p>
+<h4 id="3-棋盘覆盖的代码"><a href="#3-棋盘覆盖的代码" class="headerlink" title="3.棋盘覆盖的代码"></a>3.棋盘覆盖的代码</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token class-name">ChessBoard</span><span class="token punctuation">(</span><span class="token keyword">int</span> tr<span class="token punctuation">,</span><span class="token keyword">int</span> tc<span class="token punctuation">,</span><span class="token keyword">int</span> dr<span class="token punctuation">,</span><span class="token keyword">int</span> dc<span class="token punctuation">,</span><span class="token keyword">int</span> size<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>size <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span> <span class="token punctuation">;</span>
+	<span class="token keyword">int</span> t <span class="token operator">=</span> tile<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> s <span class="token operator">=</span> size<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+	<span class="token comment">//覆盖左上角子棋盘</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>dr <span class="token operator">&lt;</span> tr <span class="token operator">+</span> s <span class="token operator">&amp;&amp;</span> dc <span class="token operator">&lt;</span> tc <span class="token operator">+</span> s<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token class-name">ChessBoard</span><span class="token punctuation">(</span>tr<span class="token punctuation">,</span> tc<span class="token punctuation">,</span> dr<span class="token punctuation">,</span> dc<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+		board<span class="token punctuation">[</span>tr<span class="token operator">+</span>s<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>tc<span class="token operator">+</span>s<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token punctuation">;</span>
+		<span class="token class-name">ChessBoard</span><span class="token punctuation">(</span>tr<span class="token punctuation">,</span> tc<span class="token punctuation">,</span> tr<span class="token operator">+</span>s<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> tc<span class="token operator">+</span>s<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token comment">//覆盖右上角子棋盘</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>dr <span class="token operator">&lt;</span> tr <span class="token operator">+</span> s <span class="token operator">&amp;&amp;</span> dc <span class="token operator">>=</span> tc <span class="token operator">+</span> s<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token class-name">ChessBoard</span><span class="token punctuation">(</span>tr<span class="token punctuation">,</span> tc<span class="token operator">+</span>s<span class="token punctuation">,</span> dr<span class="token punctuation">,</span> dc<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+		board<span class="token punctuation">[</span>tr<span class="token operator">+</span>s<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>tc<span class="token operator">+</span>s<span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token punctuation">;</span>
+		<span class="token class-name">ChessBoard</span><span class="token punctuation">(</span>tr<span class="token punctuation">,</span> tc<span class="token operator">+</span>s<span class="token punctuation">,</span> tr<span class="token operator">+</span>s<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> tc<span class="token operator">+</span>s<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token comment">//覆盖左下角棋盘</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>dr <span class="token operator">>=</span> tr<span class="token operator">+</span>s <span class="token operator">&amp;&amp;</span> dc <span class="token operator">&lt;</span> tc<span class="token operator">+</span>s <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token class-name">ChessBoard</span><span class="token punctuation">(</span>tr<span class="token operator">+</span>s<span class="token punctuation">,</span> tc<span class="token punctuation">,</span> dr<span class="token punctuation">,</span> dc<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+		board<span class="token punctuation">[</span>tr<span class="token operator">+</span>s<span class="token punctuation">]</span><span class="token punctuation">[</span>tc<span class="token operator">+</span>s<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token punctuation">;</span>
+		<span class="token class-name">ChessBoard</span><span class="token punctuation">(</span>tr<span class="token operator">+</span>s<span class="token punctuation">,</span> tc<span class="token punctuation">,</span> tr<span class="token operator">+</span>s<span class="token punctuation">,</span> tc<span class="token operator">+</span>s<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token comment">//覆盖右下角</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>dr <span class="token operator">>=</span> tr<span class="token operator">+</span>s <span class="token operator">&amp;&amp;</span> dc <span class="token operator">>=</span> tc<span class="token operator">+</span>s<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token class-name">ChessBoard</span><span class="token punctuation">(</span>tr<span class="token operator">+</span>s<span class="token punctuation">,</span> tc<span class="token operator">+</span>s<span class="token punctuation">,</span> dr<span class="token punctuation">,</span> dc<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+		board<span class="token punctuation">[</span>tr<span class="token operator">+</span>s<span class="token punctuation">]</span><span class="token punctuation">[</span>tc<span class="token operator">+</span>s<span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token punctuation">;</span>
+		<span class="token class-name">ChessBoard</span><span class="token punctuation">(</span>tr<span class="token operator">+</span>s<span class="token punctuation">,</span> tc<span class="token operator">+</span>s<span class="token punctuation">,</span> tr<span class="token operator">+</span>s<span class="token punctuation">,</span> tc<span class="token operator">+</span>s<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/*
+ * Board:表示棋盘
+ * tile:全局变量表示L型骨牌的编号，其初始值为0
+ * tr:棋盘左上角方格的行数
+ * tc:棋盘左上角方格的列数
+ * dr:特殊方格所在的行号
+ * dc:特殊方格所在的列号
+ * size:size=2^k,棋盘规格为2^k * 2^k
+ */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="4-分治法解决棋盘覆盖的复杂度"><a href="#4-分治法解决棋盘覆盖的复杂度" class="headerlink" title="4.分治法解决棋盘覆盖的复杂度"></a>4.分治法解决棋盘覆盖的复杂度</h4><p>分治法的得出的时间复杂度T(n)的递归方程是：<br>$$<br>T(n)<br>\begin{cases}<br>&#x3D;O(1) &amp; k&#x3D;0\\<br>&#x3D;4T(k-1) + O(1) &amp; k &gt; 0<br>\end{cases}<br>$$<br>解递归方程得$ T(n) &#x3D; O(4^k) $</p>
+<h3 id="5-合并排序"><a href="#5-合并排序" class="headerlink" title="5.合并排序"></a>5.合并排序</h3><h3 id="6-快速排序"><a href="#6-快速排序" class="headerlink" title="6.快速排序"></a>6.快速排序</h3><h3 id="7-线性时间选择-课程不要求掌握"><a href="#7-线性时间选择-课程不要求掌握" class="headerlink" title="7.线性时间选择(*课程不要求掌握)"></a>7.线性时间选择(*课程不要求掌握)</h3><h3 id="8-最接近点对问题"><a href="#8-最接近点对问题" class="headerlink" title="8.最接近点对问题"></a>8.最接近点对问题</h3><h3 id="9-循环赛日程表"><a href="#9-循环赛日程表" class="headerlink" title="9.循环赛日程表"></a>9.循环赛日程表</h3>
                 
             </div>
             <hr/>
@@ -1046,7 +1103,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">1.3k</span>
+                        class="white-color">2.8k</span>
             
             
             
