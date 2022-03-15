@@ -6,7 +6,7 @@
   <link href="http://lvcns.github.io/atom.xml" rel="self"/>
   
   <link href="http://lvcns.github.io/"/>
-  <updated>2022-03-09T09:04:11.599Z</updated>
+  <updated>2022-03-15T02:11:31.004Z</updated>
   <id>http://lvcns.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>递归与分治策略</title>
+    <link href="http://lvcns.github.io/2022/03/15/recursionanddivideandconquerstrategy/"/>
+    <id>http://lvcns.github.io/2022/03/15/recursionanddivideandconquerstrategy/</id>
+    <published>2022-03-15T00:34:50.000Z</published>
+    <updated>2022-03-15T02:11:31.004Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;分治法的基本思想是：将一个难以解决的大问题分割成一些规模较小的相同问题，以便各个击破，即分而治之。由分治法产生的子问题往往是原问题的较小模式，子问题与原问题类型一致而其规模不断缩小。由此自然引出递归算法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="算法设计与分析" scheme="http://lvcns.github.io/categories/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="算法" scheme="http://lvcns.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>搭建Hexo博客并且部署到GitHub</title>

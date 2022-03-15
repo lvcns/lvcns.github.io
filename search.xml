@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>递归与分治策略</title>
+      <link href="/2022/03/15/recursionanddivideandconquerstrategy/"/>
+      <url>/2022/03/15/recursionanddivideandconquerstrategy/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>分治法的基本思想是：将一个难以解决的大问题分割成一些规模较小的相同问题，以便各个击破，即分而治之。由分治法产生的子问题往往是原问题的较小模式，子问题与原问题类型一致而其规模不断缩小。由此自然引出递归算法。</p></blockquote><h3 id="递归的概念"><a href="#递归的概念" class="headerlink" title="递归的概念"></a>递归的概念</h3><blockquote><p>直接或者间接调用自身的算法称为递归算法。用函数自身给出定义的函数称为递归函数。</p></blockquote><p><strong>可以使用递归求解的问题：</strong></p><ol><li>阶乘函数</li><li>Fibonacci数列</li><li>Ackerman函数</li><li>排列问题</li><li>整数划分问题</li><li>Hanoi塔问题</li></ol><h3 id="分治法的基本思想："><a href="#分治法的基本思想：" class="headerlink" title="分治法的基本思想："></a>分治法的基本思想：</h3><blockquote><p>分治法的基本思想是将一个规模为n的问题分解为k个规模较小的子问题，这些子问题互相独立且与原问题相同，递归的解这些子问题，然后将各个子问题的解合并得到原问题的解。</p></blockquote><h3 id="1-二分搜索问题"><a href="#1-二分搜索问题" class="headerlink" title="1.二分搜索问题"></a>1.二分搜索问题</h3><p>给定<strong>排好序</strong>的n个元素a[0:n-1]，现在要在这n个元素中找到一个特定元素x;该题可以用顺序查找算法做，但是顺序查找算法没有利用该数组有序的条件。他的时间复杂度为O(n);而二分搜索方法充分利用了元素间的次序关系。</p><p>二分搜索的复杂度：<br>时间复杂度：O(logn)<br>空间复杂度：O(1)</p><p>二分搜索算法的基本思想：将n个元素分成个数大致相同的两半，取a[n&#x2F;2]与x作比较。如果x&#x3D;a[n&#x2F;2]，则找到x，算法终止；如果x&lt;a[n&#x2F;2]，则只在数组a的左半部分继续搜索x；如果x&gt;a[n&#x2F;2]，则只在数组a的右半部继续搜索x。例子(LeetCode-704.二分查找)如下：</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">int</span> left<span class="token punctuation">,</span>right<span class="token punctuation">,</span>mid<span class="token punctuation">;</span>        left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        right <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>        <span class="token keyword">while</span><span class="token punctuation">(</span>left <span class="token operator">&lt;=</span> right<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>            mid <span class="token operator">=</span> <span class="token punctuation">(</span>left <span class="token operator">+</span> right<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>                <span class="token keyword">return</span> mid<span class="token punctuation">;</span>            <span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">></span> target<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>                right <span class="token operator">=</span> mid <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>            <span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>                left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>            <span class="token punctuation">&#125;</span>        <span class="token punctuation">&#125;</span>        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-大整数的乘法"><a href="#2-大整数的乘法" class="headerlink" title="2.大整数的乘法"></a>2.大整数的乘法</h3><h3 id="3-Strassen矩阵乘法"><a href="#3-Strassen矩阵乘法" class="headerlink" title="3.Strassen矩阵乘法"></a>3.Strassen矩阵乘法</h3><h3 id="4-棋盘覆盖"><a href="#4-棋盘覆盖" class="headerlink" title="4.棋盘覆盖"></a>4.棋盘覆盖</h3><h3 id="5-合并排序"><a href="#5-合并排序" class="headerlink" title="5.合并排序"></a>5.合并排序</h3><h3 id="6-快速排序"><a href="#6-快速排序" class="headerlink" title="6.快速排序"></a>6.快速排序</h3><h3 id="7-线性时间选择"><a href="#7-线性时间选择" class="headerlink" title="7.线性时间选择"></a>7.线性时间选择</h3><h3 id="8-最接近点对问题"><a href="#8-最接近点对问题" class="headerlink" title="8.最接近点对问题"></a>8.最接近点对问题</h3><h3 id="9-循环赛日程表"><a href="#9-循环赛日程表" class="headerlink" title="9.循环赛日程表"></a>9.循环赛日程表</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法设计与分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>搭建Hexo博客并且部署到GitHub</title>
       <link href="/2022/03/09/hexo-hithub/"/>
       <url>/2022/03/09/hexo-hithub/</url>
