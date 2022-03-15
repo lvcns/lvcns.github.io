@@ -8,8 +8,8 @@
     <meta name="description" content="
 分治法的基本思想是：将一个难以解决的大问题分割成一些规模较小的相同问题，以便各个击破，即分而治之。由分治法产生的子问题往往是原问题的较小模式，子问题与原问题类型一致而其规模不断缩小。由此自然引出递归算法。
 
-递归的概念
-直接或者间接调用自">
+递归的概念：
+直接或者间接调用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -402,14 +402,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    593
+                    951
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -430,7 +430,7 @@
                 <blockquote>
 <p>分治法的基本思想是：将一个难以解决的大问题分割成一些规模较小的相同问题，以便各个击破，即分而治之。由分治法产生的子问题往往是原问题的较小模式，子问题与原问题类型一致而其规模不断缩小。由此自然引出递归算法。</p>
 </blockquote>
-<h3 id="递归的概念"><a href="#递归的概念" class="headerlink" title="递归的概念"></a>递归的概念</h3><blockquote>
+<h3 id="递归的概念："><a href="#递归的概念：" class="headerlink" title="递归的概念："></a>递归的概念：</h3><blockquote>
 <p>直接或者间接调用自身的算法称为递归算法。用函数自身给出定义的函数称为递归函数。</p>
 </blockquote>
 <p><strong>可以使用递归求解的问题：</strong></p>
@@ -446,8 +446,8 @@
 <p>分治法的基本思想是将一个规模为n的问题分解为k个规模较小的子问题，这些子问题互相独立且与原问题相同，递归的解这些子问题，然后将各个子问题的解合并得到原问题的解。</p>
 </blockquote>
 <h3 id="1-二分搜索问题"><a href="#1-二分搜索问题" class="headerlink" title="1.二分搜索问题"></a>1.二分搜索问题</h3><p>给定<strong>排好序</strong>的n个元素a[0:n-1]，现在要在这n个元素中找到一个特定元素x;该题可以用顺序查找算法做，但是顺序查找算法没有利用该数组有序的条件。他的时间复杂度为O(n);而二分搜索方法充分利用了元素间的次序关系。</p>
-<p>二分搜索的复杂度：<br>时间复杂度：O(logn)<br>空间复杂度：O(1)</p>
-<p>二分搜索算法的基本思想：将n个元素分成个数大致相同的两半，取a[n&#x2F;2]与x作比较。如果x&#x3D;a[n&#x2F;2]，则找到x，算法终止；如果x&lt;a[n&#x2F;2]，则只在数组a的左半部分继续搜索x；如果x&gt;a[n&#x2F;2]，则只在数组a的右半部继续搜索x。例子(LeetCode-704.二分查找)如下：</p>
+<p><strong>二分搜索的复杂度：</strong><br>时间复杂度：O(logn)<br>空间复杂度：O(1)</p>
+<p><strong>二分搜索算法的基本思想：</strong>将n个元素分成个数大致相同的两半，取a[n&#x2F;2]与x作比较。如果x&#x3D;a[n&#x2F;2]，则找到x，算法终止；如果x&lt;a[n&#x2F;2]，则只在数组a的左半部分继续搜索x；如果x&gt;a[n&#x2F;2]，则只在数组a的右半部继续搜索x。例子(LeetCode-704.二分查找)如下：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span> left<span class="token punctuation">,</span>right<span class="token punctuation">,</span>mid<span class="token punctuation">;</span>
@@ -469,7 +469,15 @@
 
 
 
-<h3 id="2-大整数的乘法"><a href="#2-大整数的乘法" class="headerlink" title="2.大整数的乘法"></a>2.大整数的乘法</h3><h3 id="3-Strassen矩阵乘法"><a href="#3-Strassen矩阵乘法" class="headerlink" title="3.Strassen矩阵乘法"></a>3.Strassen矩阵乘法</h3><h3 id="4-棋盘覆盖"><a href="#4-棋盘覆盖" class="headerlink" title="4.棋盘覆盖"></a>4.棋盘覆盖</h3><h3 id="5-合并排序"><a href="#5-合并排序" class="headerlink" title="5.合并排序"></a>5.合并排序</h3><h3 id="6-快速排序"><a href="#6-快速排序" class="headerlink" title="6.快速排序"></a>6.快速排序</h3><h3 id="7-线性时间选择"><a href="#7-线性时间选择" class="headerlink" title="7.线性时间选择"></a>7.线性时间选择</h3><h3 id="8-最接近点对问题"><a href="#8-最接近点对问题" class="headerlink" title="8.最接近点对问题"></a>8.最接近点对问题</h3><h3 id="9-循环赛日程表"><a href="#9-循环赛日程表" class="headerlink" title="9.循环赛日程表"></a>9.循环赛日程表</h3>
+<h3 id="2-大整数的乘法"><a href="#2-大整数的乘法" class="headerlink" title="2.大整数的乘法"></a>2.大整数的乘法</h3><p>现有两个大整数X和Y都是n位的十进制数，计算他们的乘积XY。</p>
+<p>将这两个大整数都分成两段，每段长为n&#x2F;2，如下图示意：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201129001414493.png"></p>
+<p>即：<strong>X&#x3D;A*10^(n&#x2F;2)+B，Y&#x3D;C*10^(n&#x2F;2)+D</strong>，则：<br>$$<br>\begin{equation}\begin{split}<br>XY&amp;&#x3D;(A\times 10^{\frac n 2} + B)(C \times 10^{\frac n 2} + D)\\<br>&amp;&#x3D;AC \times 10^{\frac n 2} + (AD + BC) \times 10^{n} + BD<br>\end{split}\end{equation}<br>$$</p>
+<p>该公式需要进行4次n&#x2F;2位整数的乘法（AC,AD,BC,BD）,3次不超过2n位的整数加法，以及两次移位。但可以<strong>优化为以下公式</strong>：<br>$$<br>XY &#x3D; AC \times 10^{n} + ((A-B)(D-C)+AC+BD) \times 10^{\frac n 2} + BD<br>$$<br>优化后的公式只需要进行3次n&#x2F;2位整数的乘法,6次的整数加法，以及两次移位。设T(n)是2个n位整数相乘所需要的运算总数，则：</p>
+<p>$$<br>T(n) &#x3D;<br>\begin{cases}<br>1 &amp; n&#x3D;1\\<br>3T(n&#x2F;2) + cn &amp; n&gt;1<br>\end{cases}<br>$$</p>
+<p>$$<br>\text{时间复杂度：}<br>T(n) &#x3D; O(n^{log_3}) &#x3D; O(n^{1.59})<br>$$</p>
+<p>递归推导：已知<strong>T(1)&#x3D;1,T(n)&#x3D;3T(n&#x2F;2)+cn</strong><br>$$<br>\begin{equation}\begin{split}<br>T(n) &amp;&#x3D; 3T(\frac n 2) + cn\\<br>&amp;&#x3D;3(3T(\frac n 4) + \frac {cn} 2) + cn\\<br>&amp;&#x3D;9(T(\frac n 8) + \frac {cn} 4) + \frac {3cn} 2 + cn\\<br>&amp;&#x3D;\text{……}\\<br>&amp;&#x3D;3^k + 3^{k-1} \times 2c + 3^{k-2} \times 4c + \text{……}+3c2^{k-1} + c2^{k}\\<br>&amp;&#x3D;O(n^{log_3})\\<br>&amp;&#x3D;O(n^{1.59})<br>\end{split}\end{equation}<br>$$</p>
+<h3 id="3-Strassen矩阵乘法"><a href="#3-Strassen矩阵乘法" class="headerlink" title="3.Strassen矩阵乘法"></a>3.Strassen矩阵乘法</h3><h3 id="4-棋盘覆盖"><a href="#4-棋盘覆盖" class="headerlink" title="4.棋盘覆盖"></a>4.棋盘覆盖</h3><h3 id="5-合并排序"><a href="#5-合并排序" class="headerlink" title="5.合并排序"></a>5.合并排序</h3><h3 id="6-快速排序"><a href="#6-快速排序" class="headerlink" title="6.快速排序"></a>6.快速排序</h3><h3 id="7-线性时间选择"><a href="#7-线性时间选择" class="headerlink" title="7.线性时间选择"></a>7.线性时间选择</h3><h3 id="8-最接近点对问题"><a href="#8-最接近点对问题" class="headerlink" title="8.最接近点对问题"></a>8.最接近点对问题</h3><h3 id="9-循环赛日程表"><a href="#9-循环赛日程表" class="headerlink" title="9.循环赛日程表"></a>9.循环赛日程表</h3>
                 
             </div>
             <hr/>
@@ -960,6 +968,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1031,7 +1046,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">927</span>
+                        class="white-color">1.3k</span>
             
             
             
