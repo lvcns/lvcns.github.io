@@ -6,7 +6,7 @@
   <link href="http://lvcns.github.io/atom.xml" rel="self"/>
   
   <link href="http://lvcns.github.io/"/>
-  <updated>2022-03-15T13:48:02.809Z</updated>
+  <updated>2022-03-17T09:17:49.901Z</updated>
   <id>http://lvcns.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>素数筛</title>
+    <link href="http://lvcns.github.io/2022/03/17/primesieve/"/>
+    <id>http://lvcns.github.io/2022/03/17/primesieve/</id>
+    <published>2022-03-17T09:17:49.000Z</published>
+    <updated>2022-03-17T09:17:49.901Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-什么是素数&quot;&gt;&lt;a href=&quot;#1-什么是素数&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="算法" scheme="http://lvcns.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>递归与分治策略</title>
     <link href="http://lvcns.github.io/2022/03/15/recursionanddivideandconquerstrategy/"/>
     <id>http://lvcns.github.io/2022/03/15/recursionanddivideandconquerstrategy/</id>
     <published>2022-03-15T00:34:50.000Z</published>
-    <updated>2022-03-15T13:48:02.809Z</updated>
+    <updated>2022-03-17T08:41:53.243Z</updated>
     
     
       
