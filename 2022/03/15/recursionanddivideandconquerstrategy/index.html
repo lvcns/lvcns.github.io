@@ -395,21 +395,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-17
+                    2022-03-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.4k
+                    4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    18 分
                 </div>
                 
 
@@ -626,7 +626,41 @@
 
 <h4 id="3-快速排序的时间复杂度"><a href="#3-快速排序的时间复杂度" class="headerlink" title="3.快速排序的时间复杂度"></a>3.快速排序的时间复杂度</h4><p>快速排序算法的时间复杂度的递归方程为：<br>$$<br>\text{在最坏情况下}\\<br>T(n)&#x3D;<br>\begin{cases}<br>O(1) &amp; n \le 1 \\<br>T(n-1) + O(n) &amp; n \gt 1<br>\end{cases}\\<br>\text{解递归方程得：}T(n) &#x3D; O(n^{2})\\<br>\text{在最好情况下}\\<br>T(n)&#x3D;<br>\begin{cases}<br>O(1) &amp; n \le 1 \\<br>T(n&#x2F;2) + O(n) &amp; n \gt 1<br>\end{cases}\\<br>\text{解递归方程得：}T(n) &#x3D; O(nlogn)<br>$$<br>可以证明<strong>快速排序在平均情况下得时间复杂度也为T(n)&#x3D;O(nlogn);</strong></p>
 <p>快速排序得时间复杂度取决于划分的对称性，可以随机选择基准数，从而可以期望划分是比较对称的。</p>
-<h3 id="7-线性时间选择-课程不要求掌握"><a href="#7-线性时间选择-课程不要求掌握" class="headerlink" title="7.线性时间选择(*课程不要求掌握)"></a>7.线性时间选择(*课程不要求掌握)</h3><h3 id="8-最接近点对问题"><a href="#8-最接近点对问题" class="headerlink" title="8.最接近点对问题"></a>8.最接近点对问题</h3><h3 id="9-循环赛日程表"><a href="#9-循环赛日程表" class="headerlink" title="9.循环赛日程表"></a>9.循环赛日程表</h3>
+<h3 id="7-循环赛日程表"><a href="#7-循环赛日程表" class="headerlink" title="7.循环赛日程表"></a>7.循环赛日程表</h3><h4 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1.问题描述"></a>1.问题描述</h4><p>设有n&#x3D;2k个运动员要进行网球循环赛。现要设计一个满足以下要求的比赛日程表：</p>
+<ol>
+<li>每个选手必须与其他n-1个选手各赛一次；</li>
+<li>每个选手一天只能参赛一次；</li>
+<li>循环赛在n-1天内结束。<br>按此要求可将比赛日程表设计成有n行和(n-1)列的表。在表中第i行和第j列处填入第i个选手在第j天所遇到的选手。</li>
+</ol>
+<h4 id="2-分治策略算法的基本思想"><a href="#2-分治策略算法的基本思想" class="headerlink" title="2.分治策略算法的基本思想"></a>2.分治策略算法的基本思想</h4><p>如图，所列出的正方形表是8个选手的比赛日程表。其中左上角与左下角的两小块分别为选手 1 至选手 4 和选手 5 至选手 8 前3天的比赛日程。据此，将左上角小块中的所有数字按其相对位置抄到右下角，又将左下角小块中的所有数字按其相对位置抄到右上角，这样我们就分别安排好了选手1至选手4和选手5至选手8在后4天的比赛日程。依此思想容易将这个比赛日程表推广到具有任意多个选手的情形。</p>
+<p>$$<br>\begin{matrix}<br>1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 \\<br>2 &amp; 1 &amp; 4 &amp; 3 &amp; 6 &amp; 5 &amp; 8 &amp; 7 \\<br>3 &amp; 4 &amp; 1 &amp; 2 &amp; 7 &amp; 8 &amp; 5 &amp; 6 \\<br>4 &amp; 3 &amp; 2 &amp; 1 &amp; 8 &amp; 7 &amp; 6 &amp; 5 \\<br>5 &amp; 6 &amp; 7 &amp; 8 &amp; 1 &amp; 2 &amp; 3 &amp; 4\\<br>6 &amp; 5 &amp; 8 &amp; 7 &amp; 2 &amp; 1 &amp; 4 &amp; 3\\<br>7 &amp; 8 &amp; 5 &amp; 6 &amp; 3 &amp; 4 &amp; 1 &amp; 2\\<br>8 &amp; 7 &amp; 6 &amp; 5 &amp; 4 &amp; 3 &amp; 2 &amp; 1\\<br>\end{matrix}<br>$$<br>3.核心代码</p>
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">void schedule(int k, int n, int** array)   &#x2F;&#x2F; 数组下标从1开始
+&#123;
+    for (int i &#x3D; 1;i &lt;&#x3D; n;i++)  &#x2F;&#x2F; 第一行排1-n
+        array[1][i] &#x3D; i;
+    
+    int m &#x3D; 1;  &#x2F;&#x2F; 用来控制每一次填表时i行j列的起始填充位置
+    
+    for (int s &#x3D; 1;s &lt;&#x3D; k;s++)  &#x2F;&#x2F; k指分成k大部分进行填充日程表；s指第几大部分
+    &#123;
+        n &#x3D; n &#x2F; 2;
+        for (int t &#x3D; 1;t &lt;&#x3D; n;t++)  &#x2F;&#x2F; 第s部分内的循环
+        &#123;
+            for (int i &#x3D; m + 1;i &lt;&#x3D; 2 * m;i++) &#x2F;&#x2F; 行
+            &#123;
+                for (int j &#x3D; m + 1;j &lt;&#x3D; 2 * m;j++) &#x2F;&#x2F; 列
+                &#123;
+                    array[i][j + (t - 1) * m * 2] &#x3D; array[i - m][j + (t - 1) * m * 2 - m];       &#x2F;&#x2F;左上角等于右下角的值
+                    array[i][j + (t - 1) * m * 2 - m] &#x3D; array[i - m][j + (t - 1) * m * 2];       &#x2F;&#x2F;左下角等于右上角的值
+                &#125;
+
+            &#125;
+
+        &#125;
+        m *&#x3D; 2;
+    &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -1189,7 +1223,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.3k</span>
+                        class="white-color">6.7k</span>
             
             
             

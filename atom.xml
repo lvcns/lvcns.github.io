@@ -6,7 +6,7 @@
   <link href="http://lvcns.github.io/atom.xml" rel="self"/>
   
   <link href="http://lvcns.github.io/"/>
-  <updated>2022-03-17T09:17:49.901Z</updated>
+  <updated>2022-03-22T14:11:26.655Z</updated>
   <id>http://lvcns.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git笔记</title>
+    <link href="http://lvcns.github.io/2022/03/22/gitbiji/"/>
+    <id>http://lvcns.github.io/2022/03/22/gitbiji/</id>
+    <published>2022-03-22T13:57:09.000Z</published>
+    <updated>2022-03-22T14:11:26.655Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-Git是一个免费的开源的分布式版本控制系统。&quot;&gt;&lt;a href=&quot;#1-Git是一个免费的开源的分布式版本控制系统。&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Git" scheme="http://lvcns.github.io/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>素数筛</title>
@@ -44,7 +67,7 @@
     <link href="http://lvcns.github.io/2022/03/15/recursionanddivideandconquerstrategy/"/>
     <id>http://lvcns.github.io/2022/03/15/recursionanddivideandconquerstrategy/</id>
     <published>2022-03-15T00:34:50.000Z</published>
-    <updated>2022-03-17T08:41:53.243Z</updated>
+    <updated>2022-03-18T10:42:27.148Z</updated>
     
     
       
