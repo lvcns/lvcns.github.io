@@ -6,7 +6,7 @@
   <link href="http://lvcns.github.io/atom.xml" rel="self"/>
   
   <link href="http://lvcns.github.io/"/>
-  <updated>2022-03-22T14:11:26.655Z</updated>
+  <updated>2022-03-29T01:40:32.391Z</updated>
   <id>http://lvcns.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>(一)数据库绪论</title>
+    <link href="http://lvcns.github.io/2022/03/29/shujukuxitongxulun/"/>
+    <id>http://lvcns.github.io/2022/03/29/shujukuxitongxulun/</id>
+    <published>2022-03-29T01:40:32.000Z</published>
+    <updated>2022-03-29T01:40:32.391Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-数据库系统概述&quot;&gt;&lt;a href=&quot;#1-数据库系统概述&quot; class=&quot;headerlink&quot; title=&quot;1.数据库系统概述&quot;&gt;&lt;/a&gt;1.数据库系统概述&lt;/h3&gt;&lt;h4 id=&quot;1-1数据库的4个基本概念&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="数据库系统概论" scheme="http://lvcns.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/"/>
+    
+    
+    <category term="数据库" scheme="http://lvcns.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Git笔记</title>
@@ -63,11 +88,11 @@
   </entry>
   
   <entry>
-    <title>递归与分治策略</title>
+    <title>(一)递归与分治策略</title>
     <link href="http://lvcns.github.io/2022/03/15/recursionanddivideandconquerstrategy/"/>
     <id>http://lvcns.github.io/2022/03/15/recursionanddivideandconquerstrategy/</id>
     <published>2022-03-15T00:34:50.000Z</published>
-    <updated>2022-03-18T10:42:27.148Z</updated>
+    <updated>2022-03-29T01:35:45.892Z</updated>
     
     
       
