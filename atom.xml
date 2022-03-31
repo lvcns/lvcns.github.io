@@ -6,7 +6,7 @@
   <link href="http://lvcns.github.io/atom.xml" rel="self"/>
   
   <link href="http://lvcns.github.io/"/>
-  <updated>2022-03-29T01:40:32.391Z</updated>
+  <updated>2022-03-31T11:54:30.916Z</updated>
   <id>http://lvcns.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>(二)关系数据库</title>
+    <link href="http://lvcns.github.io/2022/03/31/guanxishujuku/"/>
+    <id>http://lvcns.github.io/2022/03/31/guanxishujuku/</id>
+    <published>2022-03-31T11:54:30.000Z</published>
+    <updated>2022-03-31T11:54:30.916Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt; 按照数据模式的三个要素，关系模型由关系数据结构，关系操作集合和关系的完整性约束三部分。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;2-1-关系数据库结构以及形式化定义&quot;&gt;&lt;a href=&quot;#2-1-关系数据库结构以及形式化定义&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据库系统概论" scheme="http://lvcns.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/"/>
+    
+    
+    <category term="数据库" scheme="http://lvcns.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>(一)数据库绪论</title>
     <link href="http://lvcns.github.io/2022/03/29/shujukuxitongxulun/"/>
     <id>http://lvcns.github.io/2022/03/29/shujukuxitongxulun/</id>
     <published>2022-03-29T01:40:32.000Z</published>
-    <updated>2022-03-29T01:40:32.391Z</updated>
+    <updated>2022-03-29T01:56:13.203Z</updated>
     
     
       
