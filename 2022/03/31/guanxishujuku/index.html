@@ -445,8 +445,8 @@
 <p>关系定义：$D_1 \times D_2 \times … \times D_n $的子集叫做在域$D_1,D_2,…,D_n$上的关系，表示为<br>$$<br>R(D_1,D_2,…,D_n)<br>$$<br>这里R表示关系的名字，n是关系的<strong>目</strong>或<strong>度</strong><br>关系中的每一个元素是关系中的元组，通常用t表示。<br>当n&#x3D;1时，称该关系为<strong>单元关系</strong><br>当n&#x3D;2时，称该关系为<strong>二元关系</strong></p>
 <p>关系是笛卡尔积的有限子集，所以关系也是一张二维表，表的每行对应一个元组，表中的每列对应一个域。由于域可以相同所以给每个列起一个名字，称为属性。n目关系必有n个属性。</p>
 </blockquote>
-<h6 id="候选码，主码，主属性，非主属性，非码属性"><a href="#候选码，主码，主属性，非主属性，非码属性" class="headerlink" title="候选码，主码，主属性，非主属性，非码属性"></a>候选码，主码，主属性，非主属性，非码属性</h6><p>候选码：某一属性组的值能唯一标识的一个元组，而其子集不能，称该属性组为候选码。<br>主码：若一个关系中有多个候选码，则选定一个为主码。<br>主属性，非主属性，非码属性：候选码的诸属性称为主属性。不包含在任何候选码中的属性称为非主属性或非码属性。</p>
-<h6 id="关系可以有三种类型：基本关系（基本表），查询表，视图表"><a href="#关系可以有三种类型：基本关系（基本表），查询表，视图表" class="headerlink" title="关系可以有三种类型：基本关系（基本表），查询表，视图表"></a>关系可以有三种类型：基本关系（基本表），查询表，视图表</h6><p>基本表是实际存在的表，他是实际存储数据的逻辑表示；查询表是查询结果对应的表；视图表是由基本表或其他视图表导出的表，是虚表，不对应实际存储的数据。</p>
+<h6 id="候选码，主码，主属性，非主属性，非码属性"><a href="#候选码，主码，主属性，非主属性，非码属性" class="headerlink" title="候选码，主码，主属性，非主属性，非码属性"></a><strong>候选码，主码，主属性，非主属性，非码属性</strong></h6><p><strong>候选码：</strong>某一属性组的值能唯一标识的一个元组，而其子集不能，称该属性组为候选码。<br><strong>主码：</strong>若一个关系中有多个候选码，则选定一个为主码。<br><strong>主属性，非主属性，非码属性：</strong>候选码的诸属性称为主属性。不包含在任何候选码中的属性称为非主属性或非码属性。</p>
+<h6 id="关系可以有三种类型：基本关系（基本表），查询表，视图表"><a href="#关系可以有三种类型：基本关系（基本表），查询表，视图表" class="headerlink" title="关系可以有三种类型：基本关系（基本表），查询表，视图表"></a><strong>关系可以有三种类型：基本关系（基本表），查询表，视图表</strong></h6><p>基本表是实际存在的表，他是实际存储数据的逻辑表示；查询表是查询结果对应的表；视图表是由基本表或其他视图表导出的表，是虚表，不对应实际存储的数据。</p>
 <p><strong>当关系作为关系数据模型的数据结构时，需要给予如下限定和扩充</strong></p>
 <p>（1）无限关系在数据库系统中时无意义的。因此，限定关系数据模型中的关系必须是有限集合。</p>
 <p>（2）通过为关系的每个列附加一个属性名的方法取消关系属性的有序性。</p>
@@ -465,10 +465,10 @@
 <h4 id="2-1-3-关系数据库"><a href="#2-1-3-关系数据库" class="headerlink" title="2.1.3 关系数据库"></a>2.1.3 关系数据库</h4><p>关系数据库也有型和值之分。<strong>关系数据库的型也称为关系数据库模式，是对关系数据库的描述。</strong></p>
 <p><strong>关系数据库的值是这些关系模式在某一时刻对应的关系的集合，通常就称为关系数据库。</strong></p>
 <h4 id="2-1-4-关系模型的存储结构"><a href="#2-1-4-关系模型的存储结构" class="headerlink" title="2.1.4 关系模型的存储结构"></a>2.1.4 关系模型的存储结构</h4><p>在关系数据库的物理组织中，有的数据库管理系统中每个表对应一个操作系统文件，将物理数据组织交给操作系统完成；有的关系型数据库管理系统从操作系统那里申请若干个大的文件，自己划分文件空间，组织表，索引等存储结构，并进行存储管理。</p>
-<h3 id="2-2关系操作"><a href="#2-2关系操作" class="headerlink" title="2.2关系操作"></a>2.2关系操作</h3><h4 id="2-2-1-基本的关系操作"><a href="#2-2-1-基本的关系操作" class="headerlink" title="2.2.1 基本的关系操作"></a>2.2.1 基本的关系操作</h4><p>（1）关系模型中常用的的关系操作有查询操作，插入，删除，修改操作两大部分。</p>
+<h3 id="2-2关系操作"><a href="#2-2关系操作" class="headerlink" title="2.2关系操作"></a>2.2关系操作</h3><h4 id="2-2-1-基本的关系操作"><a href="#2-2-1-基本的关系操作" class="headerlink" title="2.2.1 基本的关系操作"></a>2.2.1 基本的关系操作</h4><p>（1）关系模型中常用的的关系操作有<strong>查询操作，插入，删除，修改</strong>操作两大部分。</p>
 <p>（2）关系的查询表达能力很强，是关系操作中最主要的部分。查询操作又可以分为选择，投影，连接，除，并，交，差，笛卡尔积。<strong>其中选择，投影，并，差，笛卡尔积是五种基本操作</strong>。其他操作可以由这五种操作导出。</p>
-<p>（3）关系操作的特点是集合操作方式，即操作的对象和结果都是集合。</p>
-<h4 id="2-2-2-关系数据语言的分类"><a href="#2-2-2-关系数据语言的分类" class="headerlink" title="2.2.2 关系数据语言的分类"></a>2.2.2 关系数据语言的分类</h4><p>关系代数和关系演算都具有完备的表达能力，称为关系完备性。</p>
+<p>（3）关系操作的特点是集合操作方式，即<strong>操作的对象和结果都是集合。</strong></p>
+<h4 id="2-2-2-关系数据语言的分类"><a href="#2-2-2-关系数据语言的分类" class="headerlink" title="2.2.2 关系数据语言的分类"></a>2.2.2 关系数据语言的分类</h4><p>关系代数和关系演算都具有完备的表达能力，称<strong>为关系完备性。</strong></p>
 <h5 id="1-关系代数"><a href="#1-关系代数" class="headerlink" title="1.关系代数"></a>1.关系代数</h5><p>关系代数是用对关系的运算来表达查询要求</p>
 <h5 id="2-关系演算（元组关系演算和域关系演算）"><a href="#2-关系演算（元组关系演算和域关系演算）" class="headerlink" title="2.关系演算（元组关系演算和域关系演算）"></a>2.关系演算（元组关系演算和域关系演算）</h5><p>关系演算用谓词来表达查询要求</p>
 <h5 id="3-结构化查询语言"><a href="#3-结构化查询语言" class="headerlink" title="3.结构化查询语言"></a>3.结构化查询语言</h5><p>结构化查询语言是一种介于关系代数和关系演算的语言，是集查询，数据定义语言，数据操纵语言，数据控制语言与一体的关系数据语言。</p>
@@ -673,7 +673,7 @@
 <td>与</td>
 </tr>
 <tr>
-<td>$\or$</td>
+<td>$\lor$</td>
 <td>或</td>
 </tr>
 </tbody></table>
@@ -729,7 +729,7 @@
 <td align="center">IS</td>
 </tr>
 </tbody></table>
-<h5 id="2-投影"><a href="#2-投影" class="headerlink" title="2.投影"></a>2.投影</h5><h6 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h6><p>关系R上的投影是从R中选择出若干属性列组成新的关系。记作：<br>$$<br>\Pi_A(R)&#x3D;{t[A]|t \in R}<br>$$<br>其中A为R中的属性列</p>
+<h5 id="2-投影"><a href="#2-投影" class="headerlink" title="2.投影"></a>2.投影</h5><h6 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h6><p>关系R上的投影是从R中选择出若干属性列组成新的关系。记作：<br>$$<br>\Pi_A(R)&#x3D;{ t[A]|t \in R }<br>$$<br>其中A为R中的属性列</p>
 <h6 id="2-例子"><a href="#2-例子" class="headerlink" title="2.例子"></a>2.例子</h6><p>例1：查询学生的姓名和所在系，即求Student关系上学生姓名和所在系两个属性的投影。<br>$$<br>\Pi_{Sname,Sdept}(Student)<br>$$</p>
 <table>
 <thead>
@@ -774,9 +774,9 @@
 </tbody></table>
 <h5 id="3-连接"><a href="#3-连接" class="headerlink" title="3.连接"></a>3.连接</h5><p>连接分为<strong>条件连接（$\theta$连接），等值连接，自然连接</strong></p>
 <h6 id="1-条件连接也称为-theta-连接。"><a href="#1-条件连接也称为-theta-连接。" class="headerlink" title="1.条件连接也称为$\theta$连接。"></a>1.条件连接也称为$\theta$连接。</h6><p>它是从两个关系的笛卡尔积中选取属性间满足一定条件的元组。</p>
-<p>记作：<br>$$<br>R\bowtie_{A \theta B} S &#x3D; {\widehat{t_r t_s}|t_r \in R \land t_s \in S \land t_r[A]\theta t_s[B]}<br>$$<br>其中A和B分别为R与S上列数相等且可比的属性组，$\theta$为比较运算符。连接运算从R和S的笛卡尔积R x S中选取R关系在A属性组上的值与S关系在B属性主上的值满足比较关系$\theta$的元组</p>
-<h6 id="2-等值连接"><a href="#2-等值连接" class="headerlink" title="2.等值连接"></a>2.等值连接</h6><p>$\theta$为’&#x3D;’的连接为等值连接。它是从关系R和关系S的广义笛卡尔积中选取A，B属性值相等的那些元组，即等值连接为：<br>$$<br>R \bowtie_{A&#x3D;B} S &#x3D; {\widehat{t_rt_s}|t_r \in R \land t_s \in S \land t_r[A]&#x3D;t_s[B]}<br>$$</p>
-<h6 id="3-自然连接"><a href="#3-自然连接" class="headerlink" title="3.自然连接"></a>3.自然连接</h6><p>自然连接是一种特殊的等值连接，他要求两个关系中进行比较的分量必须是同名的属性组，并且在结果中把重复的属性列去掉。若R和S中具有相同的属性列B，U为R和S全体属性集合，则自然连接可记作：<br>$$<br>R \bowtie S &#x3D;{\widehat{t_rt_s}[U-B]|t_r \in R \land t_s \in S \land t_r[B] &#x3D; t_s[B]}<br>$$<br><strong>一般的连接操作从行的角度进行运算，但自然连接还需要取消重复列，所以同时从行和列的角度进行运算。</strong></p>
+<p>记作：<br>$$<br>R\bowtie_{A \theta B} S &#x3D; { \widehat{t_r t_s}|t_r \in R \land t_s \in S \land t_r[A]\theta t_s[B] }<br>$$<br>其中A和B分别为R与S上列数相等且可比的属性组，$\theta$为比较运算符。连接运算从R和S的笛卡尔积R x S中选取R关系在A属性组上的值与S关系在B属性主上的值满足比较关系$\theta$的元组</p>
+<h6 id="2-等值连接"><a href="#2-等值连接" class="headerlink" title="2.等值连接"></a>2.等值连接</h6><p>$\theta$为’&#x3D;’的连接为等值连接。它是从关系R和关系S的广义笛卡尔积中选取A，B属性值相等的那些元组，即等值连接为：<br>$$<br>R \bowtie_{A&#x3D;B} S &#x3D; { \widehat{t_rt_s}|t_r \in R \land t_s \in S \land t_r[A]&#x3D;t_s[B] }<br>$$</p>
+<h6 id="3-自然连接"><a href="#3-自然连接" class="headerlink" title="3.自然连接"></a>3.自然连接</h6><p>自然连接是一种特殊的等值连接，他要求两个关系中进行比较的分量必须是同名的属性组，并且在结果中把重复的属性列去掉。若R和S中具有相同的属性列B，U为R和S全体属性集合，则自然连接可记作：<br>$$<br>R \bowtie S &#x3D; { \widehat{t_rt_s}[U-B]|t_r \in R \land t_s \in S \land t_r[B] &#x3D; t_s[B] }<br>$$<br><strong>一般的连接操作从行的角度进行运算，但自然连接还需要取消重复列，所以同时从行和列的角度进行运算。</strong></p>
 <p>4.悬浮元组，外连接，左外连接，右外连接</p>
 <p><strong>悬浮元组：</strong>被舍弃的元组称为悬浮元组</p>
 <p><strong>外连接：</strong>如果把把悬浮元组也保存在结果关系中，而在其他属性上填空值（NULL），那么这种连接就叫做外连接。</p>
@@ -1215,43 +1215,6 @@
 
 </div>
 
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + '来源: lvcns<br />'
-            + '文章作者: lvcns<br />'
-            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
 
 
 <!-- 代码块功能依赖 -->
